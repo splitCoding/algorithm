@@ -1,3 +1,4 @@
+//시간초과 & 스택오버플로 발생하므로 권장하지 않음
 import java.util.HashSet;
 
 public class Programmers_43165_recursive {
