@@ -47,3 +47,51 @@ public class Programmers_43163 {
         else return false;
     }
 }
+/*
+class Solution {
+    boolean [] visited;
+    int min;
+    String target;
+    String [] words;
+    public int solution(String begin, String target, String[] words) {
+        visited = new boolean[words.length];
+        min = words.length+1;
+        this.target = target;
+        this.words = words;
+        boolean possible = false;
+        for(String word:words){
+            if(word.equals(target))
+                possible = true;
+        }
+        if(possible){
+            bfs(1, begin);
+            return min;
+        }
+        return 0;
+    }
+    void bfs(int depth, String current){
+        if( depth > min ) return;
+        if( changable(current, target) ){
+            min = Math.min(min, depth);
+            return;
+        }
+        for( int i = 0;i<words.length;i++){
+            if(visited[i])continue;
+            if(changable(current, words[i])){
+                visited[i] = true;
+                bfs(depth+1, words[i]);
+                visited[i] = false;
+            }
+        }
+    }
+    boolean changable(String a, String b){
+        int diff = 0;
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i) == b.charAt(i)){ continue; }
+            if( ++diff > 1 ){ return false; }
+        }
+        if( diff == 1) return true;
+        else return false;
+    }
+}
+ */
